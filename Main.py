@@ -3,8 +3,16 @@ from pydantic import BaseModel
 import requests
 import json
 import datetime
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class cat_obj(BaseModel):
     fact : str

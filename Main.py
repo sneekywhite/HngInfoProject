@@ -55,7 +55,7 @@ def get_my_stack_info():
     )
 
     result = InfoModel(
-        status="Success",
+        status="success",
         timestamp=datetime.datetime.now(datetime.timezone.utc).isoformat(),
         user=user,
         fact=fact
